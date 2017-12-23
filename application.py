@@ -1,6 +1,24 @@
 from flask import Flask, render_template
 from datetime import datetime
 app = Flask(__name__)
+import sqlite3
+
+conn = sqlite3.connect('database.db')
+c = conn.cursor()
+
+# Create table
+c.execute('''CREATE TABLE users
+             (id text, name text)''')
+
+# Insert a row of data
+c.execute("INSERT INTO users VALUES ('1','Chad')")
+
+# Save (commit) the changes
+conn.commit()
+
+# We can also close the connection if we are done with it.
+# Just be sure any changes have been committed or they will be lost.
+conn.close()
 
 # test comment
 
