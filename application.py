@@ -60,6 +60,7 @@ def Go():
 
     return render_template('Go.html')
 
+#1-5-18 work on cleaning up tables in d.db
 
 @app.route('/A')
 def A():
