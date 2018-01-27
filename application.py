@@ -138,3 +138,15 @@ def G():
     conn.close()
 
     return render_template('G.html')
+
+
+@app.route('/Chapter_1')
+def Chapter_1():
+
+    return render_template('Chapter_1.html')
+
+
+@app.route('/Chapter_2')
+def Chapter_2():
+
+    return render_template('Chapter_2.html')
